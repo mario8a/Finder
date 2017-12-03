@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="mario.ochoa.placefinder.MainActivity">
+
+
+        <ProgressBar
+            android:id="@+id/imageProgress"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:indeterminate="true"
+            android:visibility="invisible"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_below="@+id/imageProgress"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            app:srcCompat="@drawable/lgo" />
+
+        <Button
+            android:id="@+id/TomarFoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/imageView"
+            android:layout_below="@+id/imageView"
+            android:text="Tomar Fotografia" />
+
+        <Spinner
+            android:id="@+id/spinnerVisionAPI"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/TomarFoto"
+            android:layout_alignStart="@+id/imageView"
+            android:layout_below="@+id/imageView"
+            android:layout_toStartOf="@+id/TomarFoto" />
+
+        <TextView
+            android:id="@+id/visionAPIData"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignEnd="@+id/TomarFoto"
+            android:layout_alignStart="@+id/spinnerVisionAPI"
+            android:layout_below="@+id/spinnerVisionAPI"
+            android:layout_marginTop="24dp"
+            android:gravity="left"
+            android:textSize="10dp"
+            tools:text="Text LAbele" />
+
+        <Button
+            android:id="@+id/buscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/visionAPIData"
+            android:layout_alignStart="@id/visionAPIData"
+            android:layout_below="@+id/visionAPIData"
+            android:layout_marginTop="10dp"
+            android:text="Buscar"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/buscar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/buscar"
+            android:layout_alignStart="@id/buscar"
+            android:layout_below="@+id/buscar"
+            android:layout_marginTop="10dp"
+            android:background="#FAFAFA"
+            android:textSize="10dp" />
+
+
+    </RelativeLayout>
+
+</ScrollView>
